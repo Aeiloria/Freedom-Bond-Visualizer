@@ -1,0 +1,44 @@
+@import "tailwindcss";
+
+@layer utilities {
+  /* Custom scrollbar for Fire & Ether theme */
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #090510;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #2d124d;
+    border-radius: 3px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #f97316;
+  }
+}
+
+/* Custom glow utility classes */
+.glow-ember {
+  box-shadow: 0 0 16px rgba(249, 115, 22, 0.35);
+}
+
+.glow-ether {
+  box-shadow: 0 0 16px rgba(168, 85, 247, 0.35);
+}
+
+.glow-cyan-aura {
+  box-shadow: 0 0 16px rgba(34, 211, 238, 0.35);
+}
+
+.text-gradient-fire {
+  background: linear-gradient(135deg, #fdba74 0%, #fb923c 40%, #ef4444 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.text-gradient-ether {
+  background: linear-gradient(135deg, #e879f9 0%, #c084fc 40%, #22d3ee 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}

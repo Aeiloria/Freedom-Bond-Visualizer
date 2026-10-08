@@ -1,0 +1,6 @@
+{
+  "name": "Freedom Bond Visualizer",
+  "description": "Isolated testing engine for Freedom's Bond (⧆) topological state-space and compersion telemetry.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
