@@ -25,8 +25,8 @@ export const ScenarioSelector: React.FC<ScenarioSelectorProps> = ({
 }) => {
   return (
     <div className="flex items-center gap-2 overflow-x-auto py-1 scrollbar-thin">
-      <div className="flex items-center gap-1.5 text-xs font-mono text-neutral-400 shrink-0 pr-1">
-        <Layers className="w-3.5 h-3.5 text-neutral-400" />
+      <div className="flex items-center gap-1.5 text-xs font-mono text-purple-400/80 shrink-0 pr-1">
+        <Layers className="w-3.5 h-3.5 text-orange-400" />
         <span>Regime:</span>
       </div>
 
@@ -36,14 +36,14 @@ export const ScenarioSelector: React.FC<ScenarioSelectorProps> = ({
           const isSelfSustaining = preset.expectedClassification === 'SELF_SUSTAINING';
           const isForced = preset.expectedClassification === 'FORCED';
 
-          let borderStyle = 'border-neutral-800 bg-neutral-900/60 text-neutral-400 hover:text-neutral-200 hover:bg-neutral-850';
+          let borderStyle = 'border-purple-950/60 bg-[#130924]/60 text-purple-300/70 hover:text-orange-200 hover:border-orange-500/40 hover:bg-[#1c0c36]';
           if (isSelected) {
             if (isSelfSustaining) {
-              borderStyle = 'border-cyan-500/70 bg-cyan-950/40 text-cyan-200 shadow-[0_0_10px_rgba(6,182,212,0.2)] font-semibold';
+              borderStyle = 'border-purple-500/80 bg-purple-950/50 text-purple-200 shadow-[0_0_14px_rgba(168,85,247,0.35)] font-semibold';
             } else if (isForced) {
-              borderStyle = 'border-rose-500/70 bg-rose-950/40 text-rose-200 shadow-[0_0_10px_rgba(244,63,94,0.15)] font-semibold';
+              borderStyle = 'border-rose-600/80 bg-rose-950/40 text-rose-200 shadow-[0_0_12px_rgba(244,63,94,0.25)] font-semibold';
             } else {
-              borderStyle = 'border-amber-500/70 bg-amber-950/40 text-amber-200 font-semibold';
+              borderStyle = 'border-orange-500/80 bg-orange-950/40 text-orange-200 shadow-[0_0_12px_rgba(249,115,22,0.25)] font-semibold';
             }
           }
 
@@ -56,6 +56,7 @@ export const ScenarioSelector: React.FC<ScenarioSelectorProps> = ({
             >
               {isSelfSustaining && <Sparkles className="w-3 h-3 text-cyan-400" />}
               {isForced && <ShieldX className="w-3 h-3 text-rose-400" />}
+              {!isSelfSustaining && !isForced && <span className="w-1.5 h-1.5 rounded-full bg-orange-400" />}
               <span>{preset.name}</span>
             </button>
           );
